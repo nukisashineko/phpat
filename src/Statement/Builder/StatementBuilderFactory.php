@@ -7,12 +7,13 @@ namespace PHPat\Statement\Builder;
 use InvalidArgumentException;
 use PHPat\Rule\Assertion\Declaration\DeclarationAssertion;
 use PHPat\Rule\Assertion\Relation\RelationAssertion;
+use PHPat\Test\RelationRule;
 use PHPat\Test\RuleWithName;
 use PHPat\Test\TestParser;
 
 class StatementBuilderFactory
 {
-    /** @var array<RuleWithName> */
+    /** @var array<RuleWithName<RelationRule>> */
     private array $rules;
 
     public function __construct(TestParser $testParser)

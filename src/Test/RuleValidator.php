@@ -10,6 +10,8 @@ use PHPat\Rule\Assertion\Relation\RelationAssertion;
 class RuleValidator
 {
     /**
+     * @template T of Rule
+     * @param RuleWithName<T> $rule
      * @throws Exception
      */
     public function validate(RuleWithName $rule): void

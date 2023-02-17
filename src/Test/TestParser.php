@@ -10,7 +10,7 @@ use ReflectionMethod;
 
 class TestParser
 {
-    /** @var array<RuleWithName<Rule>> */
+    /** @var array<RuleWithName<RelationRule>> */
     private static array $result = [];
     private TestExtractor $extractor;
     private RuleValidator $ruleValidator;
@@ -22,7 +22,7 @@ class TestParser
     }
 
     /**
-     * @return array<RuleWithName<Rule>>
+     * @return array<RuleWithName<RelationRule>>
      */
     public function __invoke(): array
     {
@@ -34,7 +34,7 @@ class TestParser
     }
 
     /**
-     * @return array<RuleWithName<Rule>>
+     * @return array<RuleWithName<RelationRule>>
      */
     private function parse(): array
     {
@@ -66,7 +66,7 @@ class TestParser
 
     /**
      * @param array<RuleBuilderWithName> $ruleBuilders
-     * @return array<RuleWithName<Rule>>
+     * @return array<RuleWithName<RelationRule>>
      */
     private function buildRules(array $ruleBuilders): array
     {
